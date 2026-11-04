@@ -1,3 +1,57 @@
-\fannie_profile
-\venv
-\loan_data
+# Python environments, caches, and build outputs
+.venv*/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+
+# Licensed data and local experiment artifacts
+/data/
+/runs/
+/docs/reference/
+*.parquet
+*.npy
+*.npz
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.joblib
+*.zip
+sample_orig_*.txt
+sample_perf_*.txt
+
+# Credentials and local tool state
+.env
+.env.*
+!.env.example
+/.aws/
+/.agents/
+/.codex/
+
+# Scratch work, editor files, and logs
+/temp/
+/tmp/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.log
+
+# Original Fannie Mae downloader outputs and authenticated browser profile
+/loan_data/
+/fannie_profile/

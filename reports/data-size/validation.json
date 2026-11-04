@@ -1,0 +1,13 @@
+{
+  "nested_training_subsets": true,
+  "validation_and_test_signatures_match": true,
+  "prediction_identities_match": true,
+  "persistence_unchanged": true,
+  "fixed_optimizer_updates_and_exposures": true,
+  "xgboost_cuda_verified": true,
+  "seeds": [
+    522,
+    523,
+    524
+  ]
+}

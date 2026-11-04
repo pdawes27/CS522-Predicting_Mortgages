@@ -1,0 +1,6 @@
+{
+  "models": 42,
+  "classification_unchanged": true,
+  "selection_targets_disjoint": true,
+  "test_loans_disjoint": true
+}

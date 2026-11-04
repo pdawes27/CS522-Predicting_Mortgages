@@ -1,0 +1,25 @@
+seed,train_windows,model,selected_step_or_round,unit,selection_metric,selected_epoch,fitted_updates,example_exposures,fitted_epochs
+522,200000,xgboost,200,boosting round,validation_log_loss,,,,
+522,200000,xgboost_macro_f1,195,boosting round,validation_macro_f1,,,,
+522,200000,transformer,4000,optimizer update,validation_log_loss,11.0,6000.0,3072000.0,16.0
+522,200000,transformer_macro_f1,5600,optimizer update,validation_macro_f1,15.0,6000.0,3072000.0,16.0
+522,1000000,xgboost,200,boosting round,validation_log_loss,,,,
+522,1000000,xgboost_macro_f1,179,boosting round,validation_macro_f1,,,,
+522,1000000,transformer,4400,optimizer update,validation_log_loss,3.0,6000.0,3072000.0,4.0
+522,1000000,transformer_macro_f1,4000,optimizer update,validation_macro_f1,3.0,6000.0,3072000.0,4.0
+523,200000,xgboost,200,boosting round,validation_log_loss,,,,
+523,200000,xgboost_macro_f1,180,boosting round,validation_macro_f1,,,,
+523,200000,transformer,4000,optimizer update,validation_log_loss,11.0,6000.0,3072000.0,16.0
+523,200000,transformer_macro_f1,4000,optimizer update,validation_macro_f1,11.0,6000.0,3072000.0,16.0
+523,1000000,xgboost,200,boosting round,validation_log_loss,,,,
+523,1000000,xgboost_macro_f1,151,boosting round,validation_macro_f1,,,,
+523,1000000,transformer,6000,optimizer update,validation_log_loss,4.0,6000.0,3072000.0,4.0
+523,1000000,transformer_macro_f1,4000,optimizer update,validation_macro_f1,3.0,6000.0,3072000.0,4.0
+524,200000,xgboost,200,boosting round,validation_log_loss,,,,
+524,200000,xgboost_macro_f1,164,boosting round,validation_macro_f1,,,,
+524,200000,transformer,2000,optimizer update,validation_log_loss,6.0,6000.0,3072000.0,16.0
+524,200000,transformer_macro_f1,5200,optimizer update,validation_macro_f1,14.0,6000.0,3072000.0,16.0
+524,1000000,xgboost,200,boosting round,validation_log_loss,,,,
+524,1000000,xgboost_macro_f1,142,boosting round,validation_macro_f1,,,,
+524,1000000,transformer,5200,optimizer update,validation_log_loss,3.0,6000.0,3072000.0,4.0
+524,1000000,transformer_macro_f1,3600,optimizer update,validation_macro_f1,2.0,6000.0,3072000.0,4.0

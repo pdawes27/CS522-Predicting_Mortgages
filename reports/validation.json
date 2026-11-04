@@ -1,0 +1,20 @@
+{
+  "2018-main": {
+    "prediction_alignment": true,
+    "test_examples": 227392
+  },
+  "expanded-fixed-test-main": {
+    "prediction_alignment": true,
+    "test_examples": 227392
+  },
+  "future-period": {
+    "prediction_alignment": true,
+    "test_examples": 1009313
+  },
+  "autoregressive": {
+    "prediction_alignment": true,
+    "test_examples": 48559,
+    "checkpoint_reproduction": true
+  },
+  "fixed_2018_test_population_matches": true
+}

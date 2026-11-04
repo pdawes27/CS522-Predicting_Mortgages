@@ -1,0 +1,47 @@
+{
+  "cutoff": "2022-12",
+  "sample_cohorts": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "training_pools": {
+    "12": {
+      "eligible_training_windows": 4560776,
+      "eligible_training_loans": 187745,
+      "class_counts": {
+        "current": 4358440,
+        "30_59_days": 39499,
+        "60_89_days": 13789,
+        "90_plus_days": 60866,
+        "payoff": 87870,
+        "adverse_exit_or_reo": 98,
+        "other_exit": 214
+      },
+      "used_windows": 200000,
+      "used_fraction": 0.043852186557726144
+    },
+    "24": {
+      "eligible_training_windows": 2673875,
+      "eligible_training_loans": 123649,
+      "class_counts": {
+        "current": 2535995,
+        "30_59_days": 26024,
+        "60_89_days": 9514,
+        "90_plus_days": 45870,
+        "payoff": 56255,
+        "adverse_exit_or_reo": 72,
+        "other_exit": 145
+      },
+      "used_windows": 200000,
+      "used_fraction": 0.0747978121639942
+    }
+  }
+}

@@ -1,0 +1,262 @@
+[
+  {
+    "history": 12,
+    "cohort": 2016,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 2279545,
+    "exclusions": {
+      "insufficient_prior_records": 1141724,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2017,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 1698611,
+    "exclusions": {
+      "insufficient_prior_records": 1138100,
+      "reporting_gap": 12,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2018,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 1035642,
+    "exclusions": {
+      "insufficient_prior_records": 1053296,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2019,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 1008813,
+    "exclusions": {
+      "insufficient_prior_records": 968180,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2020,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 1554715,
+    "exclusions": {
+      "insufficient_prior_records": 1056089,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2021,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 1509309,
+    "exclusions": {
+      "insufficient_prior_records": 1147645,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2022,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 998861,
+    "exclusions": {
+      "insufficient_prior_records": 1152585,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2023,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 449211,
+    "exclusions": {
+      "insufficient_prior_records": 1117581,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2024,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 46447,
+    "exclusions": {
+      "insufficient_prior_records": 1027492,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 12,
+    "cohort": 2025,
+    "model_history": 12,
+    "eligibility_history": 24,
+    "windows": 0,
+    "exclusions": {
+      "insufficient_prior_records": 541882,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2016,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 2279545,
+    "exclusions": {
+      "insufficient_prior_records": 1141724,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2017,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 1698611,
+    "exclusions": {
+      "insufficient_prior_records": 1138100,
+      "reporting_gap": 12,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2018,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 1035642,
+    "exclusions": {
+      "insufficient_prior_records": 1053296,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2019,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 1008813,
+    "exclusions": {
+      "insufficient_prior_records": 968180,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2020,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 1554715,
+    "exclusions": {
+      "insufficient_prior_records": 1056089,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2021,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 1509309,
+    "exclusions": {
+      "insufficient_prior_records": 1147645,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2022,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 998861,
+    "exclusions": {
+      "insufficient_prior_records": 1152585,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2023,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 449211,
+    "exclusions": {
+      "insufficient_prior_records": 1117581,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2024,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 46447,
+    "exclusions": {
+      "insufficient_prior_records": 1027492,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  },
+  {
+    "history": 24,
+    "cohort": 2025,
+    "model_history": 24,
+    "eligibility_history": 24,
+    "windows": 0,
+    "exclusions": {
+      "insufficient_prior_records": 541882,
+      "reporting_gap": 0,
+      "unknown_or_terminal_input": 0,
+      "unknown_target": 0
+    }
+  }
+]

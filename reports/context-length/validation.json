@@ -1,0 +1,17 @@
+{
+  "population_signatures_match": true,
+  "prediction_identities_match": true,
+  "static_preprocessing_matches": true,
+  "persistence_predictions_identical": true,
+  "xgboost_cuda_verified": true,
+  "checkpoint_history_verified": true,
+  "contexts": [
+    12,
+    24
+  ],
+  "seeds": [
+    522,
+    523,
+    524
+  ]
+}

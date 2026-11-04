@@ -1,0 +1,18 @@
+{
+  "examples": 196496,
+  "signature": "e23cdbf93ec86a5ccfda0a666a6ca0173d7ea609cc1662c950c92467b9c37f3d",
+  "class_counts": {
+    "current": 192442,
+    "30_59_days": 1705,
+    "60_89_days": 424,
+    "90_plus_days": 1063,
+    "payoff": 847,
+    "adverse_exit_or_reo": 8,
+    "other_exit": 7
+  },
+  "selection_targets_disjoint": true,
+  "test_loans_disjoint": true,
+  "loans_may_overlap_checkpoint_selection": true,
+  "probability_floor": 1e-15,
+  "scipy_version": "1.18.1"
+}

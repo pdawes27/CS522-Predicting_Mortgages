@@ -1,0 +1,16 @@
+name: mortgage
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - numpy>=2.0
+  - pandas>=2.2
+  - pyarrow>=18
+  - scikit-learn>=1.6
+  - py-xgboost>=3.0=cpu*
+  - pytorch-cpu>=2.5
+  - matplotlib>=3.9
+  - scipy>=1.14
+  - pytest>=8
+  - black>=25

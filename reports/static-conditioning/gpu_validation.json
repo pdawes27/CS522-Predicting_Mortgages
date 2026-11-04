@@ -1,0 +1,44 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "torch": "2.15.0+cu132",
+  "cuda": "13.2",
+  "resources": {
+    "wall_seconds": 55.52502320900021,
+    "peak_rss_gib": 4.894550323486328,
+    "device": "cuda",
+    "threads": 4,
+    "peak_cuda_allocated_gib": 0.08283805847167969
+  },
+  "cpu_gpu_population_signatures_match": true,
+  "cpu_gpu_preprocessing_matches": true,
+  "metrics": [
+    {
+      "model": "transformer",
+      "payoff_ap": 0.0439186490241192,
+      "payoff_brier": 0.0072103808633983135,
+      "payoff_mean_probability": 0.02483956515789032,
+      "observed_payoff_rate": 0.006713477385112448,
+      "top_1_percent_budget": 10093,
+      "top_1_percent_payoffs": 604,
+      "precision_at_1_percent": 0.05984345586049737,
+      "macro_f1": 0.32197261491972,
+      "log_loss": 0.09544051362542809,
+      "median_gpu_epoch_seconds": 3.799315706000016,
+      "median_cpu_epoch_seconds": 32.5862172140005
+    },
+    {
+      "model": "transformer_conditioned",
+      "payoff_ap": 0.038401296194290425,
+      "payoff_brier": 0.006834405940026045,
+      "payoff_mean_probability": 0.02027149312198162,
+      "observed_payoff_rate": 0.006713477385112448,
+      "top_1_percent_budget": 10093,
+      "top_1_percent_payoffs": 522,
+      "precision_at_1_percent": 0.051719013177449716,
+      "macro_f1": 0.3036287470827658,
+      "log_loss": 0.09446068228136052,
+      "median_gpu_epoch_seconds": 3.4431022179996944,
+      "median_cpu_epoch_seconds": 35.243141083999944
+    }
+  ]
+}

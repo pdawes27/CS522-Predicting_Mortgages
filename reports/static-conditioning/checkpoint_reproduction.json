@@ -1,0 +1,6 @@
+{
+  "seed": 522,
+  "conditioned_checkpoint_reproduced": true,
+  "examples": 256,
+  "absolute_tolerance": 1e-06
+}

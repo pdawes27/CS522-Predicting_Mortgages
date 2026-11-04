@@ -1,0 +1,14 @@
+{
+  "population_signatures_and_preprocessing_match": true,
+  "prediction_identities_match": true,
+  "fixed_updates_and_exposures": true,
+  "prior_matches_training_transition_baseline": true,
+  "validation_only_recipe_selection_verified": true,
+  "xgboost_cuda_and_features_verified": true,
+  "calibration_complete": true,
+  "seeds": [
+    522,
+    523,
+    524
+  ]
+}

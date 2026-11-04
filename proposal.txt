@@ -1,0 +1,121 @@
+Mortgage outcome prediction from monthly loan histories
+
+This project studies whether a small transformer can improve next-month mortgage
+state predictions over persistence and XGBoost. Mortgage behavior changes during a
+loan's life, so the model will use a fixed window of monthly history together with
+origination attributes. The main objective is a careful comparison of these
+methods, rather than a production risk system or a novel transformer architecture.
+
+Related Work
+Sadhwani, Giesecke, and Sirignano (2021), Deep Learning for Mortgage Risk,
+Journal of Financial Econometrics, 19(2), 313-368.
+https://doi.org/10.1093/jjfinec/nbaa025
+This work models mortgage delinquency, foreclosure, and prepayment using deep
+learning and documents nonlinear effects. It motivates a strong baseline and
+careful comparison rather than a claim that monthly mortgage prediction is new.
+
+Chen, Guo, and Zhao (2021), Predicting mortgage early delinquency with machine
+learning methods, European Journal of Operational Research, 290(1), 358-372.
+https://doi.org/10.1016/j.ejor.2020.07.058
+The study compares thirteen methods. Its publisher summary reports strong risk
+classification by heterogeneous ensembles and metric-dependent rankings.
+
+Korangi, Mues, and Bravo, A transformer-based model for default prediction in
+mid-cap corporate markets, European Journal of Operational Research.
+https://doi.org/10.1016/j.ejor.2022.10.032
+Preprint: https://arxiv.org/abs/2111.09902
+This study applies transformers to corporate default term structures. It motivates
+sequence learning, while its population and multi-horizon target differ from ours.
+
+Hu, Xu, Chen, and Wang (2026), Predicting Mortgage Default with Machine Learning:
+AutoML, Class Imbalance, and Leakage Control, arXiv preprint 2602.00120.
+https://arxiv.org/abs/2602.00120
+The abstract emphasizes outcome definitions, imbalance, and strict temporal splits.
+It supports treating methodology and leakage control as central project concerns.
+
+
+Proposed Method
+We use Freddie Mac's official Standard Dataset samples, initially the 2018
+origination cohort and then additional downloaded cohorts from 2016 through 2025.
+Each complete sample year contains 50,000 loans and their available monthly
+performance histories. A cohort year identifies when loans originated, not the
+calendar range of performance observations. The local data's release label is
+unconfirmed; we record file checksums, schema, and observed reporting coverage.
+
+Each example uses 12 consecutive observed months through month t to predict the
+observed outcome in month t+1. The seven outcome classes are current, 30-59 days
+late, 60-89 days late, 90+ days late, voluntary payoff/maturity, adverse exit or REO
+acquisition, and other exit. Exact source-code mappings and precedence rules are
+specified in docs/methodology.md. We do not treat unavailable status, missing
+records, or a disclosure cutoff as default. We stop each history at its first
+observed exit or REO event and do not generate synthetic post-exit observations.
+
+Monthly features include balance, interest rate, loan age, and delinquency history.
+Origination features include FICO, LTV, DTI, original amount, term, original rate,
+purpose, and occupancy. We exclude future disposition and loss information from
+inputs. Numeric preprocessing and categorical vocabularies are fitted only on
+training input records. We use a compact fixed feature set rather than requiring
+a separate feature-selection study.
+
+Loan IDs receive reproducible 70/15/15 training/validation/test assignments before
+windows are constructed. Existing assignments remain fixed when years are added.
+No loan appears in multiple partitions. The first experiment evaluates unseen
+loans across reporting years. A separate future-period experiment also restricts
+training, validation, and test targets to successive calendar periods while
+preserving disjoint loans. Calendar boundaries refer to target reporting dates,
+not simply origination cohorts. Crisis periods are retained and can be analyzed
+separately; 2006-2008 cohorts are an optional additional download.
+
+The required baselines are persistence and XGBoost with the same history and
+origination information. A smoothed state-transition table supplies an inexpensive
+probabilistic baseline. The transformer starts with two encoder layers, four
+attention heads, hidden size 64, learned positions, and a static-feature
+classification head. All sequence tokens precede the target month. AutoGluon is
+outside the core scope.
+
+We train using cross-entropy and use validation log loss for early stopping.
+We compare ordinary training with optional training-only class weights. Metrics
+include fixed-class macro-F1, per-class precision/recall/F1 and support, confusion
+matrices, accuracy, and log loss for probabilistic models. Persistence has no
+probabilistic log-loss score. We also report performance by target year, cohort,
+and transition type. Rare adverse exits may have insufficient support for a
+reliable conclusion. A current-month-only transformer ablation tests whether the
+12-month history adds value on identical eligible target examples.
+
+Implementation and Plan
+1. Validate and inventory raw samples, document provenance, and build the 2018
+   histories. Record gaps, unknown statuses, missing values, and terminal events.
+2. Create reproducible disjoint splits, training-only preprocessing, and shared
+   monthly arrays with window indices instead of duplicated overlapping windows.
+3. Run persistence, the transition baseline, XGBoost, and the small transformer.
+4. Compare weighting and the one-month ablation using validation data for choices.
+5. Expand to more sample years through the same processing interface; retain the
+   original 2018 test examples for a controlled expansion comparison.
+6. Run a separate calendar-held-out evaluation and report class support, prediction
+   years, errors, runtime, memory, and limitations. Repeat seeds where practical.
+7. Produce reproducible commands, aggregate figures, and the final report.
+
+Risk and Fallback
+Process raw data one cohort at a time and store compact prepared files. Fit on a
+uniform, reproducible sample of training windows when CPU time is limited, while
+retaining the natural outcome distribution in evaluation. Report any sampling
+limits explicitly. Increase data only if class support or model comparisons
+justify it. A failure to beat persistence or XGBoost is still a useful result.
+
+Optional Extensions
+Compare longer input windows or a directly supervised fixed-horizon outcome after
+the main experiment is complete.
+
+Requested Autoregressive Extension
+We also train a separate state-only transformer on the previous 12 mortgage states
+and fixed origination attributes. It generates one monthly state at a time, feeds
+that state back into a rolling context, and repeats until the requested horizon or
+a terminal event. This provides a next-token-style generation loop without needing
+unknown future balances or interest rates. Outputs include greedy sequences,
+sampled trajectories, and per-month state probabilities. We backtest recursive
+1-12-month forecasts on held-out loans, comparing with persistence and an absorbing
+transition-table baseline. Unobserved future months remain censored; known exits
+are absorbing for probability accounting. We report Brier score and classification
+metrics by horizon. Generated paths accumulate model error and omit evolving loan
+measurements and economic shocks; generation alone does not establish reliable
+long-term risk estimates.

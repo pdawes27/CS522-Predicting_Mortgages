@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mortgage-outcomes"
+version = "0.1.0"
+description = "Freddie Mac next-month loan-state experiments"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=2.0", "pandas>=2.2", "pyarrow>=18", "scikit-learn>=1.6",
+  "xgboost>=3.0", "torch>=2.5", "matplotlib>=3.9", "scipy>=1.14",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "black>=25"]
+
+[project.scripts]
+mortgage = "mortgage.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mortgage*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

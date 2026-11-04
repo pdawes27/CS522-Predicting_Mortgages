@@ -1,0 +1,22 @@
+{
+  "population_signatures_match": true,
+  "preprocessing_matches": true,
+  "training_settings_match": true,
+  "legacy_seed_522_predictions_exactly_reproduced": true,
+  "strict_checkpoint_loads": true,
+  "seeds": [
+    522,
+    523,
+    524
+  ],
+  "status": "Controlled exploratory comparison; test data previously inspected, not a fresh confirmation",
+  "xgboost_reference": {
+    "payoff_ap": 0.018324431673640944,
+    "payoff_brier": 0.007713899482041597,
+    "payoff_mean_probability": 0.029852844774723053,
+    "observed_payoff_rate": 0.006713477385112448,
+    "top_1_percent_budget": 10093,
+    "top_1_percent_payoffs": 318,
+    "precision_at_1_percent": 0.031506985039136036
+  }
+}

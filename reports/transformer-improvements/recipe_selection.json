@@ -1,0 +1,25 @@
+{
+  "criterion": "mean validation log loss of log-loss-selected checkpoints",
+  "validation_losses": {
+    "constant": [
+      0.0699643009582656,
+      0.07048445673101914,
+      0.06968843229938351
+    ],
+    "lower": [
+      0.07016641039264243,
+      0.07067066385218995,
+      0.07012489679703177
+    ],
+    "cosine": [
+      0.07074880448408591,
+      0.07018210904739151,
+      0.07092419356178177
+    ]
+  },
+  "selected_recipe": "constant",
+  "selected_settings": {
+    "learning_rate": 0.001,
+    "lr_schedule": "constant"
+  }
+}

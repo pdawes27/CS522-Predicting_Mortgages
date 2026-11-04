@@ -1,0 +1,22 @@
+{
+  "method": "Paired loan-cluster bootstrap, resampling whole loans with replacement; fixed fitted models",
+  "status": "Exploratory: these test results were inspected to select the hypothesis. Intervals exclude optimization/tuning uncertainty.",
+  "intervals": {
+    "2018-main": {
+      "loans": 6847,
+      "bootstrap_replicates": 200,
+      "ap_difference_95_percentile_interval": [
+        0.006113417731054218,
+        0.012213693061103077
+      ]
+    },
+    "future-period": {
+      "loans": 44592,
+      "bootstrap_replicates": 200,
+      "ap_difference_95_percentile_interval": [
+        0.02319879307424225,
+        0.030463125779724886
+      ]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+model,context_months,examples,events,new_delinquency_average_precision
+transformer_current,1,219263,1826,0.02169888713800805
+transformer,12,219263,1826,0.09519611252930002
+xgboost,12,219263,1826,0.0967715519319036
