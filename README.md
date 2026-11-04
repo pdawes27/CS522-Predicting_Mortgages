@@ -5,13 +5,6 @@ a transition table, and XGBoost on Freddie Mac's official sample loan histories.
 See [methodology](docs/methodology.md) for label definitions and leakage controls,
 and [TODO.md](TODO.md) for progress and remaining decisions.
 
-The original Fannie Mae downloader (`download_years.py`), spreadsheet, and
-`headings.csv` are retained from the group repository. Their
-[original setup notes](docs/legacy-fannie-mae-setup.md) describe a separate data
-source; those downloads are not inputs to this Freddie Mac pipeline. Playwright
-is only needed for that legacy downloader and is not included in the pipeline
-environments.
-
 ## Repository layout
 
 | Path | Purpose |
